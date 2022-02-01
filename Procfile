@@ -1,0 +1,1 @@
+web: gunicorn hand_craft.wsgi --log-file -
