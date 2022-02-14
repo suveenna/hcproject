@@ -12,43 +12,45 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand  fst-italic"  href="#" ><font size="6">craft shop</font></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-          </li>
+          
         </ul>
         <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" >
           <button class="btn btn-outline-success" type="submit">Search</button>
+          <a href=><img src="{% static 'images/account.PNG' %}" height="20px" width="20px" alt="">
+          <label for="" style="color: white;">account</label>
+          </a>
+           
         </form>
       </div>
     </div>
   </nav>
-
+  <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+    <div class="container-fluid">
+      <table>
+        <tr>
+          <td ><a class="nav-link active" aria-current="page" href="#">DINING</a></td>
+          <td ><a class="nav-link active" aria-current="page" href="#">LIGHTING</a></td>
+          <td><a href=""><a class="nav-link active" aria-current="page" href="#">GARDEN</a></td>
+          <td><a class="nav-link active" aria-current="page" href="#">DRESS</a></td>
+          <td><a href=""><a class="nav-link active" aria-current="page" href="#">GIFTING</a></a></td>
+           <td><a class="nav-link active" aria-current="page" href="#">FURNITURES</a></td>
+            <td><a class="nav-link active" aria-current="page" href="#">DECOR</a></td>
+            <td><a class="nav-link active" aria-current="page" href="#">NEW</a></td>
+            <td><a class="nav-link active" aria-current="page" href="#">MORE</a></td>
+          </tr>
+      </table>
+      
+    </div>
+  </nav>
   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -57,21 +59,21 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="{% static 'images/p1.PNG' %}" height="400px" width="1200px"class="d-block w-100"alt="...">
+        <img src="{% static 'images/pic1.PNG' %}" height="600px" width="1200px"class="d-block w-100"alt="...">
         <div class="carousel-caption d-none d-md-block">
           <h5>First slide label</h5>
           <p>Some representative placeholder content for the first slide.</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="{% static 'images/p2.PNG' %}" height="400px" width="1200px" class="d-block w-100" alt="...">
+        <img src="{% static 'images/pc1.PNG' %}" height="600px" width="1200px" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
           <h5>Second slide label</h5>
           <p>Some representative placeholder content for the second slide.</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="..." class="d-block w-100" alt="...">
+        <img src="{% static 'images/pc4.PNG' %}" height="600px" width="1200px" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
           <h5>Third slide label</h5>
           <p>Some representative placeholder content for the third slide.</p>
@@ -86,6 +88,36 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
+  
+  </div>
+  <br>
+  <br>
+  <div align="center">
+    <center><h1><font face="verdana">HANDCRAFTED IN INDIA</font></h1></center>
+  <br>
+  <div align="center">
+    <p><font size="5" face="verdana">Craft shop is an online craft brand started in 2012 with a vision to promote Indian handicrafts globally & help small artisans based in different parts of India earn a living out of it. Amazing Traditional Indian Handicrafts You will Love.</font> </p>
+  </div>
+   <br><br>
+
+   <h1 align="left"><font face="verdana">shop by category</font></h1>
+   <br><br>
+   <div>
+     <table>
+       <tr>
+         <td><img src="{% static 'images/spicebox.PNG' %}" height="200px" width="200px" alt=""></td>
+         <td><img src="{% static 'images/plates.PNG' %}" height="200px" width="200px" alt=""></td>
+         <td><img src="{% static 'images/TABLE LAMP.PNG'%}" height="200px" width="200px" alt=""></td>
+         <td><img src="{% static 'images/bowl.PNG' %}" height="200px" width="200px" alt=""></td>
+      </tr>
+      <tr>
+        <td><a class="nav-link active text-dark" aria-current="page" href="#">Spice Box</a></td>
+        <td><a class="nav-link active text-dark" aria-current="page" href="#">Plates</a></td>
+        <td><a class="nav-link active text-dark" aria-current="page" href="#">Table Lamps</a></td>
+        <td><a class="nav-link active text-dark" aria-current="page" href="#">Bowls</a></td>
+      </tr>
+     </table>
+   </div>
   </div>
 </body>
 </html>
