@@ -14,34 +14,57 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
- 
+   
   <nav class="navbar fixed-top navbar-expand-lg  navbar-dark" style="padding: 0;">
-    <div class="container-fluid"   align="center" style="background-color: white;padding-top:0%;margin-top: 0%;" >
+    <div class="container-fluid "   align="center" style="background-color: white;padding-top:0%;margin-top: 0%;" >
       <a class="navbar-brand  fst-italic"  href="{% url 'home' %}"><font face="italic" style="color:rgb(248, 110, 133);" size="8">craft shop</font></a>
       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 300px;">
+      <button type="button" style="background-color:papayawhip;">search</button>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+       <span class="navbar-toggler-icon"> search</span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           
         </ul>
+         
         
+       
+
+        <form class="d-flex"  >
+          
           <table  cellpadding="30" cellspacing="30">
-            <tr>
+            <tr >
          
        
         
-        <td>  <a href="{% url 'login' %}"><img src="{% static 'images/account.PNG' %}" height="30px" width="30px" alt="a">
+        <td>  <a href="{% url 'login' %}"><img src="{%  static 'images/account.PNG'  %}" height="30px" width="30px" alt="a">
           <label for="" style="color:black;"><font size="4" face="verdana">account</font></label></td>
           <td><a href="{% url 'cart' %}"><img src="{%  static 'images/cart2.PNG' %}" height="30px" width="30px" alt=""><label for="" style="color:black;"><font size="4" face="verdana">cart</font></label></a></td>
         </tr>
         </a>
         </table>
-        
+       
+        </form>
       </div>
     </div>
   </nav>
+
+
+   <!-- navbar -->
+   
+
+
+
+  <!-- <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid" >
+      <a class="navbar-brand fst-italic" href="{% url 'home' %}"><font face="italic" style="color:rgb(248, 110, 133);" size="8">craft shop</font></a>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 300px;">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </nav> -->
   {% block content %}
 
   {% endblock %}
@@ -167,7 +190,7 @@
 
   <!-- Copyright -->
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2021 Copyright:
+    © 2022 Copyright:
     <a class="text-reset fw-bold" href="https://mdbootstrap.com/">craftshop.com</a>
   </div>
   <!-- Copyright -->

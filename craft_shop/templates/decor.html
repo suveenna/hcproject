@@ -5,18 +5,18 @@
 
     <div>
       <nav class="navbar navbar-expand-lg navbar-dark bg-light">
-        <div class="container-fluid" style=" margin-top: 100px; ">
+        <div class="container-fluid" style=" margin-top: 100px; height: 50px; ">
           <table cellpadding="30px" cellspacing="20px" align="center">
             <tr>
               <td ><a class="nav-link active" aria-current="page" href="{% url 'dining' %}"><font style="color: black;">DINING</font></a></td>
-              <td ><a class="nav-link active" aria-current="page" href="#"><font style="color: black;">LIGHTING</font></a></td>
-              <td><a class="nav-link active" aria-current="page" href="#"><font style="color: black;">GARDEN</font></a></td>
-              <td><a class="nav-link active" aria-current="page" href="#"><font style="color: black;">DRESS</font></a></td>
-              <td><a class="nav-link active" aria-current="page" href="#"><font style="color: black;">GIFTING</font></a></td>
-               <td><a class="nav-link active" aria-current="page" href="#"><font style="color: black;">FURNITURES</font></a></td>
+              <td ><a class="nav-link active" aria-current="page" href="{% url 'lighting' %}"><font style="color: black;">LIGHTING</font></a></td>
+              <td><a class="nav-link active" aria-current="page" href="{% url 'garden' %}"><font style="color: black;">GARDEN</font></a></td>
+              <td><a class="nav-link active" aria-current="page" href="{% url 'dress' %}"><font style="color: black;">DRESS</font></a></td>
+             
+               
                 <td><a class="nav-link active" aria-current="page" href="{% url 'decor' %}"><font style="color: black;">DECOR</font></a></td>
-                <td><a class="nav-link active" aria-current="page" href="#"><font style="color: black;">NEW</font></a></td>
-                <td><a class="nav-link active" aria-current="page" href="#"><font style="color: black;">MORE</font></a></td>
+              
+                
               </tr>
           </table>
           
@@ -40,7 +40,7 @@
                   <table cellpadding="30px" cellspacing="20px">
                     
                     <tr >
-                      <td ><img src="{% static 'images/decor1.PNG' %}" height="250px" width="250px" alt=""></td>
+                      <td ><img src="{% static 'images/decor1.PNG' %}" height="300px" width="250px" alt=""></td>
                       <td><img src="{% static 'images/decor2.PNG' %}" height="250px" width="250px" alt=""></td>
                       <td><img src="{% static 'images/decor3.PNG'%}" height="250px" width="250px" alt=""></td>
                       <td><img src="{% static 'images/bowl.PNG' %}" height="250px" width="250px" alt=""></td>
