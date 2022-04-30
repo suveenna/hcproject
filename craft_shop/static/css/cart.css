@@ -1,0 +1,28 @@
+#navbarSupportedContent{
+    column-gap: 900px; 
+
+  } 
+  #cart_img{
+
+    padding-top: 250px;
+    padding-bottom: 200px;
+    
+    background-color: papayawhip;
+
+  }
+
+  #cart_log{
+   
+    width: 150px;
+    height: 50px;
+    background-color: orangered;
+
+
+  }
+  .dropdown-menu{
+   
+   
+   font-style: italic;
+   font-size: 20px;
+
+  }

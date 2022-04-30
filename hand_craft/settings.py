@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'craft_shop',
+    'craft_admin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

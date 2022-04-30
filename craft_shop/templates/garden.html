@@ -2,96 +2,85 @@
 {% load static %}
 {% block content %}
 
-v<div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
-      <div class="container-fluid" style=" margin-top: 100px; height: 50px; ">
-        <table cellpadding="30px" cellspacing="20px" align="center">
-          <tr>
-            <td><a class="nav-link active" aria-current="page" href="{% url 'dining' %}">
-                <font style="color: black;">DINING</font>
-              </a></td>
-            <td><a class="nav-link active" aria-current="page" href="{% url 'lighting' %}">
-                <font style="color: black;">LIGHTING</font>
-              </a></td>
-            <td><a class="nav-link active" aria-current="page" href="#">
-                <font style="color: black;">GARDEN</font>
-              </a></td>
-            <td><a class="nav-link active" aria-current="page" href="#">
-                <font style="color: black;">DRESS</font>
-              </a></td>
-            
-            
-            <td><a class="nav-link active" aria-current="page" href="{% url 'decor' %}">
-                <font style="color: black;">DECOR</font>
-              </a></td>
-           
-            
-          </tr>
-        </table>
-  
-      </div>
-    </nav>
-  </div>
 
-  <div>
-    <br>
-  
-    <div align="center">
-      <table border="0" cellpadding="15">
-        <tr>
-          <td>
-            <h1>All Kitchen & Dining</h1>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p>
-              <font size="4" face="verdana"> Enhance the experience of culinary with kitchen
-                and dining accessories brought to you by Craft shop . The handmade wooden kitchen accessories
-                will add rich vibes of traditional flavours to your abode and will catch the eye of your guests.</font>
-            </p>
-            <hr>
-          </td>
-  
-        </tr>
-    </div>
-    </table>
-    <div align="center">
-      <table cellpadding="30px" cellspacing="20px">
-  
-        <tr>
-          <td><img src="{% static 'images/dress1.PNG' %}" height="300px" width="250px" alt=""></td>
-          <td><img src="{% static 'images/dress2.PNG' %}" height="300px" width="250px" alt=""></td>
-          <td><img src="{% static 'images/dress3.PNG'%}" height="300px" width="250px" alt=""></td>
-          <td><img src="{% static 'images/dress4.PNG' %}" height="300px" width="250px" alt=""></td>
-        </tr>
-        <tr>
-          <td><a class="nav-link active text-dark bg-light" aria-current="page" href="#"> W<br>
-            Beige & Black Embroidered Striped <br> Keyhole Neck Tiered Ethnic Maxi Dress <br> <span>
-                <font size="5">Rs:1,650.00</font>
-              </span></a></td>
-          <td><a class="nav-link active text-dark bg-light" aria-current="page" href="#">W <br>
-            Women Lime Green <br> Solid Straight Kurta <br> <span>
-                <font size="5">Rs:1,149.00</font>
-              </span></a></td>
-          <td><a class="nav-link active text-dark bg-light" aria-current="page" href="#">anayna<br>
-            Red & Blue Floral <br> Ethnic Maxi Dress<br> <span>
-                <font size="5">Rs:1,895.00</font>
-              </span></a></td>
-          <td><a class="nav-link active text-dark bg-light" aria-current="page" href="#">SASSAFRAS<br>
-            Yellow & Off-White  <br>Floral Printed Wrap Dress
-              H<br><span>
-                <font size="5">Rs:749.00</font>
-              </span></a></td>
-        </tr>
-      
-      </table>
-    </div>
-  
-  
-  
-  
+
+<br><br>
+
+<div align="center">
+  <table border="0" cellpadding="15">
+    <tr>
+      <td>
+        <h1>Garden Decor Items</h1>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          <font size="4" face="verdana">Enhance the beauty of the garden or balcony and make them look more appealing and magnificent with beautifully handcrafted pots, planters, garden items, and garden accessories. Craftshop brings to you a unique collection of garden
+             decor accessories, a must explore collection to add warm and happy vibes to your garden.</font>
+        </p>
+        <hr>
+      </td>
+
+    </tr>
+
+</table>
+</div>
+
+
+<!-- ----card---- -->
+
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-4">
+      <div class="col mb-4">
+          <div class="card" style="width: 300px;">
+            <img src="{% static 'images/garden1.PNG' %}"  height="350px"   class="card-img-top" alt="...">
+            <div class="card-body" >
+              <a href="" class="card-title" style="color:black;"><label for="">'Triple Blooms' Hand-Painted Metal Railing Cum Table Planters Pot  <br>
+                <span>
+                  <font size="5">Rs:1,500.00</font></span></label></a  >
+            </div>
+          </div>
+        </div>
+
+        <div class="col mb-4">
+          <div class="card"style="width: 300px;">
+            <img src="{% static 'images/garden2.PNG' %}"  height="350px" class="card-img-top" alt="...">
+            <div class="card-body">
+              <a href="#" class="card-title" style="color:black;"><label for="">'Black Goblet' Metal Hand-Painted Hanging Planter Pot With Jute<br><span>
+                  <font size="5">Rs:500.00</font>
+                </span></label></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col mb-4">
+          <div class="card"style="width: 300px;">
+            <img src="{% static 'images/garden3.PNG' %}"  height="350px" class="card-img-top" alt="...">
+            <div class="card-body">
+              <a href="#" class="card-title" style="color:black;"><label for="">'Glossy Yellow' Hand-Painted Floor Cum Table Planters Pot In Metal  <br><span>
+                  <font size="5">Rs:500.00</font>
+                </span></label></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col mb-4">
+          <div class="card"style="width: 300px;">
+            <img src="{% static 'images/garden4.PNG' %}"  height="350px" class="card-img-top" alt="...">
+            <div class="card-body">
+              <a href="#" class="card-title" style="color:black;"><label for="">'Plant In A Cup' Table Cum Floor Planter Pot In Glossy Red<br><span>
+                  <font size="5">Rs:700.00</font>
+                </span></label></a>
+            </div>
+          </div>
+        </div>
+
   </div>
+</div>
+
+
+  
 
 
 {% endblock %}

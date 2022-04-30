@@ -3,40 +3,12 @@
 {% block content %}
 
 
-<div>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-light">
-    <div class="container-fluid" style=" margin-top: 100px; height: 50px; ">
-      <table cellpadding="1px" cellspacing="20px" align="center">
-        <tr>
-          <td><a class="nav-link active" aria-current="page" href="{% url 'dining' %}">
-              <font style="color: black;">DINING</font>
-            </a></td>
-          <td><a class="nav-link active" aria-current="page" href="{% url 'lighting' %}">
-              <font style="color: black;">LIGHTING</font>
-            </a></td>
-          <td><a class="nav-link active" aria-current="page" href="{% url 'garden' %}">
-              <font style="color: black;">GARDEN</font>
-            </a></td>
-          <td><a class="nav-link active" aria-current="page" href="dress">
-              <font style="color: black;">DRESS</font>
-            </a></td>
-         
-          
-          <td><a class="nav-link active" aria-current="page" href="{% url 'decor' %}">
-              <font style="color: black;">DECOR</font>
-            </a></td>
-         
-          
-        </tr>
-      </table>
-
-    </div>
-  </nav>
-</div>
 
 
 
-  <br>
+
+
+  <br><br>
 
   <div align="center">
     <table border="0" cellpadding="15">
@@ -60,61 +32,72 @@
     </table>
   </div>
 
-  <div align="center">
-    <table cellpadding="30px" cellspacing="20px">
+  
+  
+  
+ 
 
-      <tr>
-        <td><img src="{% static 'images/dining1.PNG' %}" height="250px" width="250px" alt=""></td>
-        <td><img src="{% static 'images/plates.PNG' %}" height="250px" width="250px" alt=""></td>
-        <td><img src="{% static 'images/dining2.PNG'%}" height="250px" width="250px" alt=""></td>
-        <td><img src="{% static 'images/bowl.PNG' %}" height="250px" width="250px" alt=""></td>
-      </tr>
-      <tr>
-        <td><a class="nav-link active text-dark bg-light" aria-current="page" href="#"> 'Blues Of Sky' Studio Pottery
-            <br>Glazed Coffee Mugs In <br> Ceramic (Set Of 2)<br> <span>
-              <font size="5">Rs:650.00</font>
-            </span></a></td>
-        <td><a class="nav-link active text-dark bg-light" aria-current="page" href="#">Moroccan Dining' Handpainted <br>
-            Ceramic Dinner Plates With<br> Katoris (8 Pieces, Serving for 4) <br> <span>
-              <font size="5">Rs:2,249.00</font>
-            </span></a></td>
-        <td><a class="nav-link active text-dark bg-light" aria-current="page" href="#">'Old Fashioned Martaban'<br>
-            Ceramic Chutney & Pickle <br>Jar Set With Tray<br> (Set of 2, 225 ML)<br><span>
-              <font size="5">Rs:1,095.00</font>
-            </span></a></td>
-        <td><a class="nav-link active text-dark bg-light" aria-current="page" href="#">The Hut Curved Serving <br>
-            Hand-Painted Ceramic <br>Bowls (Set Of 2)<br><span>
-              <font size="5">Rs:749.00</font>
-            </span></a></td>
-      </tr>
+  <!-- card -->
 
-      <tr>
-        <td><img src="{% static 'images/spicebox.PNG' %}" height="250px" width="250px" alt=""></td>
-        <td><img src="{% static 'images/dining3.PNG' %}" height="250px" width="250px" alt=""></td>
-        <td><img src="{% static 'images/dining4.PNG'%}" height="250px" width="250px" alt=""></td>
-        <td><img src="{% static 'images/dining5.PNG' %}" height="250px" width="250px" alt=""></td>
-      </tr>
-      <tr>
-        <td><a class="nav-link active text-dark bg-light" aria-current="page" href="#">"Twelve Blends" Spice Box<br>
-            With 12 Containers & Spoon <br>In Sheesham Wood<br><span>
-              <font size="5">Rs:1,299.00</font>
-            </span></a></td>
-        <td><a class="nav-link active text-dark bg-light" aria-current="page" href="#">'Indigo Chevron' Hand-painted
-            <br> Ceramic Milk & Water Jug <br>(Non-airtight, 480 ML, <br> Microwave Safe)<br><span>
-              <font size="5">Rs:575.00</font>
-            </span></a></td>
-        <td><a class="nav-link active text-dark bg-light" aria-current="page" href="#">'Daawat-e-Taj' Handcrafted
-            <br>Ceramic Teapot Set of 3 <br>(Tea Pot, Milk Pot, Sugar Pot) <br>(Microwave Safe)<br><span>
-              <font size="5">Rs:1,575.00</font>
-            </span></a></td>
-        <td><a class="nav-link active text-dark bg-light" aria-current="page" href="#">'Oasis Plank Duo' Hand-Painted
-            <br> Nested Serving Trays In <br> Sheesham Wood (Set of 2)<br><span>
-              <font size="5">Rs:2,009.00</font>
-            </span></a></td>
-      </tr>
+  <div class="container" >
+    <div class="row row-cols-1 row-cols-md-4">
+      
+        <div class="col mb-4">
+            <div class="card" style="width: 300px;">
+              <img src="{% static 'images/spicebox.PNG' %}"  height="350px"   class="card-img-top" alt="...">
+              <div class="card-body" >
+                <a href="{% url 'dining_spicebox' %}" class="card-title" style="color:black;"><label for="">"Twelve Blends" Spice Box With 12 Containers
+                  & Spoon In Sheesham Wood
+                  <br><span>
+                    <font size="5">Rs:1000.00</font>
+                  </span></label></a  >
+              </div>
+            </div>
+          </div>
 
-    </table>
+          <div class="col mb-4">
+            <div class="card"style="width: 300px;">
+              <img src="{% static 'images/dining1.PNG' %}"  height="350px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <a href="{% url 'dining_mugs' %}" class="card-title" style="color:black;"><label for="">'Blues Of Sky' Studio Pottery
+                  <br>Glazed Coffee Mugs In <br> Ceramic (Set Of 2)<br> <span>
+                    <font size="5">Rs:650.00</font>
+                  </span></label></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col mb-4">
+            <div class="card"style="width: 300px;">
+              <img src="{% static 'images/bowl.PNG' %}"  height="370px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <a href="{% url 'dining_bowls' %}" class="card-title" style="color:black;"><label for=""> The Hut Curved Serving
+                  Hand-Painted Ceramic Bowls (Set Of 2)<br><span>
+                    <font size="5">Rs:749.00</font>
+                  </span></label></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col mb-4">
+            <div class="card"style="width: 300px;">
+              <img src="{% static 'images/dining2.PNG' %}"  height="350px" class="card-img-top" alt="...">
+              <div class="card-body">
+                <a href="{% url 'dining_jar' %}" class="card-title" style="color:black;"><label for="">'Old Fashioned Martaban'
+                  Ceramic Chutney & Pickle Jar Set With Tray<br> (Set of 2, 225 ML)<br><span>
+                    <font size="5">Rs:1,095.00</font>
+                  </span></label></a>
+              </div>
+            </div>
+          </div>
+
+    </div>
   </div>
+
+
+
+
+
 
 
 

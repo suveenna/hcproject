@@ -2,96 +2,148 @@
 {% load static %}
 {% block content %}
 
-<div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
-      <div class="container-fluid" style=" margin-top: 100px; height: 50px; ">
-        <table cellpadding="10px" cellspacing="20px" align="center">
-          <tr>
-            <td><a class="nav-link active" aria-current="page" href="{% url 'dining' %}">
-                <font style="color: black;">DINING</font>
-              </a></td>
-            <td><a class="nav-link active" aria-current="page" href="{% url 'lighting' %}">
-                <font style="color: black;">LIGHTING</font>
-              </a></td>
-            <td><a class="nav-link active" aria-current="page" href="{% url 'garden' %}">
-                <font style="color: black;">GARDEN</font>
-              </a></td>
-            <td><a class="nav-link active" aria-current="page" href="dress">
-                <font style="color: black;">DRESS</font>
-              </a></td>
-           
-            
-            <td><a class="nav-link active" aria-current="page" href="{% url 'decor' %}">
-                <font style="color: black;">DECOR</font>
-              </a></td>
-           
-            
-          </tr>
-        </table>
-  
-      </div>
-    </nav>
-  </div>
+<style>
+  /* The sidebar menu */
+  .sidenav {
 
-  <div>
-    <br>
-  
-    <div align="center">
-      <table border="0" cellpadding="15">
-        <tr>
-          <td>
-            <h1>All Kitchen & Dining</h1>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p>
-              <font size="4" face="verdana"> Enhance the experience of culinary with kitchen
-                and dining accessories brought to you by Craft shop . The handmade wooden kitchen accessories
-                will add rich vibes of traditional flavours to your abode and will catch the eye of your guests.</font>
-            </p>
-            <hr>
-          </td>
-  
-        </tr>
+    width: 160px;
+    /* Set the width of the sidebar */
+    position: fixed;
+    /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1;
+    /* Stay on top */
+    top: 1;
+    /* Stay at the top */
+    left: 0;
+    margin-left: 10px;
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 20px;
+  }
+
+  /* The navigation menu links */
+  .sidenav li {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+
+  }
+
+  #dresscard {
+    margin-left: 360px;
+    /* Same as the width of the sidebar */
+    padding: 0px 10px;
+  }
+</style>
+
+
+
+<br><br>
+
+<div align="center">
+  <table border="0" cellpadding="15">
+    <tr>
+      <td>
+        <h1>All Kitchen & Dining</h1>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          <font size="4" face="verdana"> Enhance the experience of culinary with kitchen
+            and dining accessories brought to you by Craft shop . The handmade wooden kitchen accessories
+            will add rich vibes of traditional flavours to your abode and will catch the eye of your guests.</font>
+        </p>
+        <hr>
+      </td>
+
+    </tr>
+
+  </table>
+</div>
+
+<!-- side nav -->
+<!-- <div class="sidenav">
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div> -->
+<div class="container-fluid">
+  <div class="row ">
+    <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 ">
+      <div class="sidenav" style="width: 18rem; border: 1px solid silver;">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">An item</li>
+          <li class="list-group-item">A second item</li>
+          <li class="list-group-item">A third item</li>
+        </ul>
+      </div>
     </div>
-    </table>
-    <div align="center">
-      <table cellpadding="30px" cellspacing="20px">
-  
-        <tr>
-          <td><img src="{% static 'images/dress1.PNG' %}" height="300px" width="250px" alt=""></td>
-          <td><img src="{% static 'images/dress2.PNG' %}" height="300px" width="250px" alt=""></td>
-          <td><img src="{% static 'images/dress3.PNG'%}" height="300px" width="250px" alt=""></td>
-          <td><img src="{% static 'images/dress4.PNG' %}" height="300px" width="250px" alt=""></td>
-        </tr>
-        <tr>
-          <td><a class="nav-link active text-dark bg-light" aria-current="page" href="#"> W<br>
-            Beige & Black Embroidered Striped <br> Keyhole Neck Tiered Ethnic Maxi Dress <br> <span>
-                <font size="5">Rs:1,650.00</font>
-              </span></a></td>
-          <td><a class="nav-link active text-dark bg-light" aria-current="page" href="#">W <br>
-            Women Lime Green <br> Solid Straight Kurta <br> <span>
-                <font size="5">Rs:1,149.00</font>
-              </span></a></td>
-          <td><a class="nav-link active text-dark bg-light" aria-current="page" href="#">anayna<br>
-            Red & Blue Floral <br> Ethnic Maxi Dress<br> <span>
-                <font size="5">Rs:1,895.00</font>
-              </span></a></td>
-          <td><a class="nav-link active text-dark bg-light" aria-current="page" href="#">SASSAFRAS<br>
-            Yellow & Off-White  <br>Floral Printed Wrap Dress
-              H<br><span>
-                <font size="5">Rs:749.00</font>
-              </span></a></td>
-        </tr>
-      
-      </table>
-    </div>
-  
-  
-  
-  
   </div>
+</div>
+
+<!-- -----card---- -->
+
+
+<div class="container" id="dresscard">
+  <div class="row row-cols-1 row-cols-md-4">
+
+    <div class="col mb-4">
+      <div class="card" style="width: 300px;">
+        <img src="{% static 'images/dress1.PNG' %}" height="350px" class="card-img-top" alt="...">
+        <div class="card-body">
+          <a href="{% url 'dress_maxidress' %}" class="card-title" style="color:black;"><label for="">W<br>
+              Beige & Black Embroidered Striped Keyhole Neck Tiered Ethnic Maxi Dress <br>
+              <span>
+                <font size="5">Rs:1,650.00</font>
+              </span></label></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col mb-4">
+      <div class="card" style="width: 300px;">
+        <img src="{% static 'images/dress2.PNG' %}" height="370px" class="card-img-top" alt="...">
+        <div class="card-body">
+          <a href="{% url 'dress_kurtha' %}" class="card-title" style="color:black;"><label for="">W <br>
+              Women Lime Green <br> Solid Straight Kurta<br><span>
+                <font size="5">Rs:1,149.00</font>
+              </span></label></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col mb-4">
+      <div class="card" style="width: 300px;">
+        <img src="{% static 'images/dress3.PNG' %}" height="390px" class="card-img-top" alt="...">
+        <div class="card-body">
+          <a href="{% url 'dress_floraldress' %}" class="card-title" style="color:black;"><label for="">anayna<br>
+              Red & Blue Floral Ethnic Maxi Dress <br><span>
+                <font size="5">Rs:1,849.00</font>
+              </span></label></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col mb-4">
+      <div class="card" style="width: 300px;">
+        <img src="{% static 'images/dress4.PNG' %}" height="370px" class="card-img-top" alt="...">
+        <div class="card-body">
+          <a href="{% url 'dress_wrapdress'%}" class="card-title" style="color:black;"><label for="">SASSAFRAS<br>
+              Yellow & Off-White <br>Floral Printed Wrap Dress
+              H <br><span>
+                <font size="5">Rs:749.00</font>
+              </span></label></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 
 
 

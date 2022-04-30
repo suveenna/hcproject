@@ -13,7 +13,7 @@
 </head>
 <body>
   <div class="container-fluid"> 
- <center>  <a class="navbar-brand  fst-italic"  href="{% url 'home' %}" ><font face="italic" style="color:rgb(248, 110, 133);" size="8">craft shop</font></a></center> 
+ <center>  <a class="navbar-brand  fst-italic"  href="{% url 'home' %}" ><img src="{% static 'images/insidelogo.PNG' %}" alt=""  height="100px" width="200px"></a></center> 
  <br><br>
  <div     >
      <form action="">
@@ -26,29 +26,29 @@
             <div class="mb-3">
               <label for="" class="form-label">User name</label>
               <input class="form-control form-control-lg"   id="name" type="text" placeholder="user name" aria-label=".form-control-lg example">
-              <span style="color: red;" id="span1"></span> <br>
+              <span id="reg_usr" style="color: red;" ></span> <br>
             </div>  
             <div class="mb-3">  
               <label for="" class="form-label">Email address</label>
-              <input type="text" class="form-control form-control-lg" id="Email" aria-describedby="emailHelp" placeholder="email">
-              <span style="color: red;" id="span2"></span> <br>
+              <input type="text" class="form-control form-control-lg" id="email" aria-describedby="emailHelp" placeholder="email">
+              <span id="reg_email" style="color: red;" ></span> <br>
             
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Password</label>
               <input type="text" class="form-control form-control-lg" placeholder="At least 6 characters" id="password1">
-              <span style="color: red;" id="span3"></span> <br>
+              <span id="reg_pass" style="color: red;" ></span> <br>
             </div>  
             
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Password again</label>
               <input type="text" class="form-control form-control-lg"  id="password2" placeholder="confirm password">
-              <span style="color: red;" id="span4"></span> <br>
+              <span  id="reg_passagin" style="color: red;"></span> <br>
             </div>
             
             
             <div class="d-grid gap-2">
-              <button onclick="validation()" id="bt1" class="btn btn-warning" type="button">Sign up</button>
+              <button onclick="validate()" id="btn1" class="btn btn-warning" type="submit">Sign up</button>
               
             </div>
             <br><br><br>
@@ -66,50 +66,55 @@
  
   <script>
 
-function validation() {
+function validate() {
             var name = document.getElementById("name")
             var email = document.getElementById("email")
             var password1 = document.getElementById("password1")
             var password2 = document.getElementById("password2")
 
+
             if (name.value == "") {
                 document.getElementById("name").style.borderColor="red"
                 
-                document.getElementById("span1").innerHTML="user name must be filled "
-            }
-
-            if (email.value == "") {
-                document.getElementById("email").style.borderColor="red"
+                document.getElementById("reg_usr").innerHTML="user name must be filled "
                 
-                document.getElementById("span2").innerHTML="email must be filled "
-
+                status = 0
             }
+            
+             if (email.value == "") {
+                document.getElementById("email").style.borderColor="red"
+               
+                document.getElementById("reg_email").innerHTML="email must be filled "
 
-
+               status = 0
+            }
             if (password1.value == "") {
                 document.getElementById("password1").style.borderColor="red"
-               
-                document.getElementById("span3").innerHTML="password must be filled "
+                
+                document.getElementById("reg_pass").innerHTML="password must be filled "
 
-               
+                status = 0
 
             }
-            else if (password1.value.length < 6) {
+            else if (password1.value.length <= 6 ) {
                 document.getElementById("password1").style.borderColor="red"
-                
-                document.getElementById("span3").innerHTML="password must be at least 6 characters "
-        
-                
+               
+                document.getElementById("reg_pass").innerHTML="password must be atleast 6 characters "
+              
+                status = 0
            
             }
             else if (password1.value != password2.value) {
                
-                document.getElementById("span4").innerHTML="password must be same "
+                document.getElementById("reg_passagin").innerHTML="password must be same "
 
-                
+                status = 0
             }
 
-            
+            if(status == 0){
+
+                return false
+            }
 
         }
     
