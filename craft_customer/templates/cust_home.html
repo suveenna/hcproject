@@ -1,4 +1,4 @@
-{% extends 'master.html' %}
+{% extends 'custmaster.html' %}
 {% load static %}
 {% block content %}
 
@@ -134,7 +134,7 @@ ul{
   <div class="carousel-inner">
      <div class="carousel-item active" id="carousel1">
       <img src="{% static 'images/carousel4.PNG' %}" height="700px" width="1200px" class="d-block w-100" alt="...">
-      <button class="btn" style="size: 7;"><a class="nav-link active" href="{% url 'decor' %}"
+      <button class="btn" style="size: 7;"><a class="nav-link active" href="{% url 'cust_decor' %}"
           style="color: white;">Shop Now</a></button>
       <div class="carousel-caption d-none d-md-block">
         <!-- <h5>First slide label</h5>
@@ -143,7 +143,7 @@ ul{
     </div>
     <div class="carousel-item" id="carousel4">
       <img src="{% static 'images/carousel5.PNG' %}" height="700px" width="1200px" class="d-block w-100" alt="...">
-      <button class="btn" style="size: 7;"><a class="nav-link active" href="{% url 'dress' %}"
+      <button class="btn" style="size: 7;"><a class="nav-link active" href="{% url 'cust_dining' %}"
           style="color: white;">Shop Now</a></button>
       <div class="carousel-caption d-none d-md-block">
         <!-- <h5>Second slide label</h5>
@@ -152,7 +152,7 @@ ul{
     </div>
     <div class="carousel-item" id="carousel2">
       <img src="{% static 'images/pic3.PNG' %}" height="700px" width="1200px" class="d-block w-100" alt="...">
-      <button class="btn" style="size: 7;"><a class="nav-link active" href="{% url 'dress' %}"
+      <button class="btn" style="size: 7;"><a class="nav-link active" href="{% url 'cust_dress' %}"
           style="color: white;">Shop Now</a></button>
       <div class="carousel-caption d-none d-md-block">
         <!-- <h5>Second slide label</h5>
@@ -161,7 +161,7 @@ ul{
     </div>
     <div class="carousel-item" id="carousel3">
       <img src="{% static 'images/carousel1.PNG' %}" height="700px" width="1200px" class="d-block w-100" alt="...">
-      <button class="btn" style="size: 7;"><a class="nav-link active" href="{% url 'lighting' %}"
+      <button class="btn" style="size: 7;"><a class="nav-link active" href="{% url 'cust_lighting' %}"
           style="color: white;">Shop Now</a></button>
       <div class="carousel-caption d-none d-md-block">
         <!-- <h5>Third slide label</h5>

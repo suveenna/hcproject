@@ -18,32 +18,31 @@
 
 
   <style>
-   
-
     #navbarSupportedContent {
       column-gap: 450px;
 
     }
-    .dropdown-menu{
-     
-     width: 250px;
-     font-style: italic;
-     font-size: 20px;
+
+    .dropdown-menu {
+
+      width: 250px;
+      font-style: italic;
+      font-size: 20px;
 
     }
-    
-   
-
-#navbarNav{
-
-margin-left: 600px;
 
 
-}
 
-ul{
-  column-gap: 100px;
-}
+    #navbarNav {
+
+      margin-left: 600px;
+
+
+    }
+
+    ul {
+      column-gap: 100px;
+    }
   </style>
 
 
@@ -58,96 +57,109 @@ ul{
   <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light" style="padding: 0;">
     <div class="container-fluid" style="background-color: white;">
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
 
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
-                    style="width: 400px;">
-                <button class="btn btn-outline-success" type="submit" style="background-color:black;">
-                    <font style="color: white;">Search</font>
-                </button>
-            </form>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 400px;">
+          <button class="btn btn-outline-success" type="submit" style="background-color:black;">
+            <font style="color: white;">Search</font>
+          </button>
+        </form>
 
-            <a class="navbar-brand  fst-italic" href="{% url 'home' %}">
-                <!-- <font face="italic" style="color:black" size="28">Inside</font> -->
-                <img src="{% static 'images/insidelogo.PNG' %}" alt=""  height="100px" width="200px">
+        <a class="navbar-brand  fst-italic" href="{% url 'cust_home' %}">
+          <!-- <font face="italic" style="color:black" size="28">Inside</font> -->
+          <img src="{% static 'images/insidelogo.PNG' %}" alt="" height="100px" width="200px">
+        </a>
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="{% url 'login' %}" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="{%  static 'images/user.PNG'  %}" height="35px" width="35px" alt="a">
+              <label for="" style="color:black;">
+                <font size="4" face="verdana">Profile</font>
+              </label>
             </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href=""> </a></li>
 
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="{% url 'login' %}" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="{%  static 'images/user.PNG'  %}" height="35px" width="35px" alt="a">
-                        <label for="" style="color:black;">
-                            <font size="4" face="verdana">account</font>
-                        </label>
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="{% url 'login'%}"> Sign in</a></li>
+              <BR>
+              <li<a class="dropdown-item" href=""> </a>
+          </li>
+          </BR>
+          <li><a class="dropdown-item" href=""></a></li>
+          <BR>
+          <li><a class="dropdown-item" href="">Orders</a></li>
+        </ul>
+        
 
-                        <BR>
-                        <li>New customer?<a class="dropdown-item" href="{% url 'signup'%}"> Sign Up</a></li>
-                        </BR>
-                        <li><a class="dropdown-item" href="{% url 'signup'%}">My profile</a></li>
-                        <BR>
-                        <li><a class="dropdown-item" href="{% url 'signup'%}">Orders</a></li>
-                    </ul>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'cart' %}"><img src="{%  static 'images/shopping-cart.PNG' %}"
-                            height="35px" width="35px" alt=""><label for="" style="color:black;">
-                            <font size="4" face="verdana">cart</font>
-                        </label></a>
-                </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'cart_cust' %}"><img src="{%  static 'images/shopping-cart.PNG' %}" height="35px"
+              width="35px" alt=""><label for="" style="color:black;">
+              <font size="4" face="verdana">cart</font>
+            </label></a>
+        </li>
 
 
 
 
-            </ul>
-        </div>
+        </ul>
+      </div>
     </div>
 
-</nav>
+  </nav>
 
   <br><br><br><br><br>
 
 
-<nav class="navbar navbar-expand-lg navbar-light ">
-  <div class="container-fluid">
-    
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page"href="{% url 'dining' %}"><font style="color: black;"><b>DINING</b></font></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page"  href="{% url 'lighting' %}"><font style="color: black;"><b> LIGHTING </b></font></a>
-        </li> <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{% url 'garden' %}"><font style="color: black;"><b>GARDEN</b></font></a>
-        </li> <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{% url 'dress' %}"><font style="color: black;"><b>DRESS</b></font></a>
-        </li> <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{% url 'decor' %}"><font style="color: black;"><b>DECOR</b></font></a>
-        </li>
-      </ul>
+  <nav class="navbar navbar-expand-lg navbar-light ">
+    <div class="container-fluid">
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'cust_dining' %}">
+              <font style="color: black;"><b>DINING</b></font>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'cust_lighting' %}">
+              <font style="color: black;"><b> LIGHTING </b></font>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'cust_garden' %}">
+              <font style="color: black;"><b>GARDEN</b></font>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'cust_dress' %}">
+              <font style="color: black;"><b>DRESS</b></font>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'cust_decor' %}">
+              <font style="color: black;"><b>DECOR</b></font>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
-<hr>
+  </nav>
+  <hr>
 
 
- 
+
 
   {% block content %}
 
@@ -201,7 +213,7 @@ ul{
               <i class="fas fa-gem me-3"></i>Craft Shop
             </h6>
             <p>
-              <a href="{% url 'aboutus' %}" class="text-reset">About Us</a>
+              <a href="{% url 'aboutus_cust' %}" class="text-reset">About Us</a>
             </p>
             <!-- <p>
             Here you can use rows and columns to organize your footer content. Lorem ipsum
