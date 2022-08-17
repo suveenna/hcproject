@@ -22,7 +22,7 @@
 </head>
 <style>
   body {
-    background-color: url('/static/images/backgrd.jpg');
+    background-color: url('/static/images/login.jpg');
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -41,13 +41,14 @@
           <div class="card" style="border-radius: 1rem;">
             <div class="row g-0">
               <div class="col-md-6 col-lg-5 d-none d-md-block">
-                <img src="{% static 'images/backgrd.jpg' %}" alt="" class="img-fluid"
+                <img src="{% static 'images/login.jpg' %}" alt="" class="img-fluid"
                   style="border-radius: 1rem 0 0 1rem; width: 600px; height: 700px;">
               </div>
               <div class="col-md-6 col-lg-7 d-flex align-items-center">
                 <div class="card-body p-4 p-lg-5 text-black">
 
-                  <form>
+                  <form method="POST">
+                    {% csrf_token %}
 
                     <div class="d-flex align-items-center mb-3 pb-1">
                       <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
@@ -57,13 +58,13 @@
                     <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
 
                     <div class="form-outline mb-4">
-                      <input type="email" id="username" class="form-control form-control-lg" />
+                      <input type="email" id="username" class="form-control form-control-lg" name="email">
                       <label class="form-label" for="form2Example17">Email address</label><br>
                       <span id="spn_usr" style="color: red;"></span>
                     </div>
 
                     <div class="form-outline mb-4">
-                      <input type="password" id="password" class="form-control form-control-lg" />
+                      <input type="password" id="password" class="form-control form-control-lg" name="password">
                       <label class="form-label" for="form2Example27">Password</label><br>
                       <span id="spn_pass" style="color: red;"></span>
                     </div>

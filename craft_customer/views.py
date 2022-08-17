@@ -1,4 +1,6 @@
+from contextlib import redirect_stderr
 from django.shortcuts import render
+from craft_shop import views
 
 # Create your views here.
 
@@ -32,4 +34,23 @@ def aboutus_cust(request):
 
 
 def cart_cust(request):
-    return render(request,'cart_cust.html')       
+    return render(request,'cart_cust.html')  
+
+
+def cust_diningspice(request):
+    return render(request,'cust_diningspice.html')  
+
+
+def cust_diningmugs(request):
+    return render(request,'cust_diningmugs.html')              
+
+
+def myprofile(request):
+    return render(request,'myprofile.html')
+
+def cust_diningjar(request):
+    return render(request,'cust_diningjar.html')      
+
+
+
+

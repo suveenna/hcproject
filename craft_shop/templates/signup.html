@@ -14,48 +14,50 @@
 <body>
   <div class="container-fluid"> 
  <center>  <a class="navbar-brand  fst-italic"  href="{% url 'home' %}" ><img src="{% static 'images/insidelogo.PNG' %}" alt=""  height="100px" width="200px"></a></center> 
- <br><br>
+ <br>
  <div     >
-     <form action="">
+     <form action="" method="POST">
+      {% csrf_token %}
     <center><h1>Create account</h1></center>
-    <br><br>
-    <table align="center" cellpadding="12" cellspacing="6" border="1" height="700" width="500" style="background-image: url('/static/images/backgrd.jpg'); background-size: 1400px;">
+    <br>
+    <table align="center" cellpadding="12" cellspacing="6" border="1" height="700" width="500" style="background-image: url('/static/images/signup.PNG'); background-size: 600px;">
         <tr><td>
-          <form>
+          
+           
             
             <div class="mb-3">
               <label for="" class="form-label">User name</label>
-              <input class="form-control form-control-lg"   id="name" type="text" placeholder="user name" aria-label=".form-control-lg example">
+              <input class="form-control form-control-lg"   id="name" type="text" placeholder="user name" aria-label=".form-control-lg example" name="user_name">
               <span id="reg_usr" style="color: red;" ></span> <br>
             </div>  
             <div class="mb-3">  
               <label for="" class="form-label">Email address</label>
-              <input type="text" class="form-control form-control-lg" id="email" aria-describedby="emailHelp" placeholder="email">
+              <input type="text" class="form-control form-control-lg" id="email" aria-describedby="emailHelp" placeholder="email" name="email">
               <span id="reg_email" style="color: red;" ></span> <br>
             
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input type="text" class="form-control form-control-lg" placeholder="At least 6 characters" id="password1">
+              <input type="text" class="form-control form-control-lg" placeholder="At least 6 characters" id="password1" name="password">
               <span id="reg_pass" style="color: red;" ></span> <br>
             </div>  
             
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Password again</label>
-              <input type="text" class="form-control form-control-lg"  id="password2" placeholder="confirm password">
+              <input type="text" class="form-control form-control-lg"  id="password2" placeholder="confirm password" name="cnfrm_password">
               <span  id="reg_passagin" style="color: red;"></span> <br>
             </div>
             
             
             <div class="d-grid gap-2">
-              <button onclick="validate()" id="btn1" class="btn btn-warning" type="submit">Sign up</button>
+              <button onclick="validate()" id="btn1" class="btn btn-dark" type="submit">Sign up</button>
               
             </div>
             <br><br><br>
             <div>
               <label for="" class="form-label">Already have an account?<a href="{% url 'login' %}">sign in</a></label>
             </div>
-            </form>
+           
         </td>
         </tr>
  </table>
@@ -121,7 +123,7 @@ function validate() {
 </script>
 
 
-   
+   <br><br><br>
 
 </body>
 </html>

@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .models import *
+from distutils.log import error
 
 # Create your views here.
 
@@ -8,11 +10,37 @@ def home(request):
 
 
 def login(request):
-    return render(request, 'login.html')
+     if request.method == 'POST':
+        email = request.POST['email']
+        password = request.POST['password']
+        data = Customer.objects.filter(email=email, password=password).exists()
+        if data:
+            user = Customer.objects.get(email=email, password=password)
+            request.session['user_id'] = user.id
+            return redirect('cust_home')
+     return render(request, 'login.html')
+
+def log_out(request):
+    del request.session['user_id']
+    request.session.flush()
+    return redirect('home')
+
+
 
 
 def signup(request):
-    return render(request, 'signup.html')
+     if request.method == 'POST':
+        usr_name = request.POST['user_name']
+        email = request.POST['email']
+        password = request.POST['password']
+        
+        
+        obj = Customer(user_name=usr_name, email=email, 
+                        password=password )
+        obj.save()
+
+    
+     return render(request, 'signup.html', {'error': error})
 
 
 def cart(request):
